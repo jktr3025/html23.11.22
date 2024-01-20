@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            /* background: skyblue; */
+        }
+        a::before{
+            content: "|";
+            display: inline-block;
+            padding-right: 30px;
+            padding-left: 10px;
+        }
+        a:first-of-type::before{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상클래스</h1>
+    
+    <a href="#">menu1</a>
+    <a href="#">menu2</a>
+    <a href="#">menu3</a>
+    <a href="#">menu4</a>
+    <a href="#">menu5</a>
+    <a href="#">menu6</a>
+</body>
+</html>

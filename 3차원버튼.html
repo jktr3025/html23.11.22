@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        body {
+            background: #eee;
+            text-align: center;
+            padding: 50px 0;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            /* 3차원 효과있게 각도를 주고 싶을 때, 트랜스폼x만으로는 안됨
+     그 부모에 3차원의 트랜스폼을 적용시켜줄 수 있는 명령어 필요
+    transform-style:preserve-3d;
+     perspective: 1000px; 얼마만큼 멀리서 볼 지 (소실점)
+     걸어줘야함
+     */
+        }
+
+        .button {
+            padding: 30px 70px;
+            display: inline-block;
+            background-image: linear-gradient(skyblue, rgb(3, 169, 235));
+            border-radius: 20px;
+            font-size: 24px;
+            /* font-size: 1.5em; */
+            font-weight: bold;
+            color: antiquewhite;
+            text-shadow: 0 0 3px rgba(238, 217, 58, 0.566);
+            border: 1px solid rgb(0, 62, 170);
+            box-shadow: 0 6px 0 rgb(0, 63, 135), 0 3px 15px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+            /* inset 이너섀도우
+        ,(콤마)로 구분해서 여러가지 섀도우 효과를 줄 수 있음 */
+            transform: rotateX(30deg);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(rgb(3, 169, 235), skyblue);
+        }
+
+        .button:active {
+            background-image: linear-gradient(rgb(3, 169, 235), skyblue);
+            transform: rotateX(0deg);
+            box-shadow: 0 2px 0 rgb(0, 63, 135), 0 3px 15px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+
+        }
+
+        /* 액티브버튼은 누르고 있을 때고, 호버는 마우스를 올리고 있을 때! */
+    </style>
+</head>
+
+<body>
+    <a href="#" class="button">Press Me</a>
+</body>
+
+</html>

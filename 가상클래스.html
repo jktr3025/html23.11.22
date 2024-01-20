@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스 만들기</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        ul {
+            text-align: center;
+        }
+
+        ul li {
+            display: inline-block;
+            /* border: darkblue 1px solid; */
+        }
+        ul li::before{
+            content: "";
+            display: block;
+            width: 10px;
+            height: 1px;
+            background: black;
+        }
+        ul li:first-child::before{
+            display: none;
+        }
+        ul li::after{}
+        ul li a {
+            display: block;
+            padding: 20px;
+            /* border: 1px slateblue solid; */
+        }
+        ul li a::before{
+            content: "★";
+            display: block;
+            color: gold;
+            font-size: 20px;
+        }
+        ul li a::after{
+            content: "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            border: 1px saddlebrown solid;
+            background-image: url("img/강아지4.jpg") ;
+            background-size: cover;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>가상클래스 만들기</h1>
+
+    <ul>
+        <li><a href="#">company</a></li>
+        <li><a href="#">product</a></li>
+        <li><a href="#">service</a></li>
+    </ul>
+
+</body>
+
+</html>

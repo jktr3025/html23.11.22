@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            float: left;
+        }
+
+        .box:hover .box_inner {
+            transform: rotateY(180deg);
+        }
+        
+        .box_inner {
+            transform-style: preserve-3d;
+            width: 300px;
+    height: 300px;
+    position: relative;
+    transition: all 2s;
+}
+
+
+.flip {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    text-align: center;
+    line-height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    color: white;
+    font-size: 30px;
+}
+img {
+    width: 300px;
+    height: 300px;
+}
+.front {
+    background: red;
+}
+
+        .back {
+            background: teal;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box_inner">
+            <div class="flip front"><img src="img/강아지1.jpg" alt="강아지1"></div>
+            <div class="flip back">강아지1</div>
+        </div><!-- box_inner -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="box_inner">
+            <div class="flip front"><img src="img/강아지2.jpg" alt="강아지2"></div>
+            <div class="flip back">강아지2</div>
+        </div><!-- box_inner -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="box_inner">
+            <div class="flip front"><img src="img/강아지3.jpg" alt="강아지3"></div>
+            <div class="flip back">강아지3</div>
+        </div><!-- box_inner -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="box_inner">
+            <div class="flip front"><img src="img/강아지4.jpg" alt="강아지4"></div>
+            <div class="flip back">강아지4</div>
+        </div><!-- box_inner -->
+    </div><!-- box -->
+</body>
+
+</html>
